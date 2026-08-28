@@ -2,11 +2,10 @@
 
 public class Dessert : Menu
 {
-    public Dessert(int lotNumber, string name, int price, int type)
+    public Dessert(string name, int price)
     {
-        LotNumber = lotNumber;
         Name = name;
         Price = price;
-        Type = type;
+        Type = "디저트";
     }
 }
