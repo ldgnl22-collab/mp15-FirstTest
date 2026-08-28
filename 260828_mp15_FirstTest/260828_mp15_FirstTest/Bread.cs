@@ -9,8 +9,8 @@ public class Bread : Menu, IDiscount
         Type = "빵";
     }
 
-    public void Discount()
+    public string DiscountMessage()
     {
-        // 3개 사면 10프로 할인
+        return "3개 이상 10% 할인";
     }
 }
