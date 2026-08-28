@@ -7,5 +7,6 @@ public class Dessert : Menu
         Name = name;
         Price = price;
         Type = "디저트";
+        Discount = discount;
     }
 }

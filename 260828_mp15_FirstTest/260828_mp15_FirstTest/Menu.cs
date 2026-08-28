@@ -8,11 +8,13 @@ public abstract class Menu
     private string name;
     private int price;
     private string type;
+    protected string discount = "정가";
     
     public int LotNumber { get; set; }
     public string Name { get; protected set; }
     public int Price { get; protected set; }
     public string Type { get; protected set; }
+    public string Discount { get; protected set; }
 
     public void Sell(int money)
     {

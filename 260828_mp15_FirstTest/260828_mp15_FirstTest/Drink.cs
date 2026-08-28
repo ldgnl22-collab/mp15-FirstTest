@@ -7,5 +7,6 @@ public class Drink : Menu
         Name = name;
         Price = price;
         Type = "음료";
+        Discount = discount;
     }
 }
