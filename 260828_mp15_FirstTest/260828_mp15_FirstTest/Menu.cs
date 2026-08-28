@@ -4,11 +4,15 @@ using System;
 
 public abstract class Menu
 {
+    private int lotNumber;
     private string name;
     private int price;
+    private int type;
     
+    public int LotNumber { get; protected set; }
     public string Name { get; protected set; }
     public int Price { get; protected set; }
+    public int Type { get; protected set; }
 
     public void Sell(int money)
     {
