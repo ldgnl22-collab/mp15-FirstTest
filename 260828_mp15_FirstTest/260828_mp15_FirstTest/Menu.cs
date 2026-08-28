@@ -9,7 +9,7 @@ public abstract class Menu
     private int price;
     private int type;
     
-    public int LotNumber { get; protected set; }
+    public int LotNumber { get; set; }
     public string Name { get; protected set; }
     public int Price { get; protected set; }
     public int Type { get; protected set; }
