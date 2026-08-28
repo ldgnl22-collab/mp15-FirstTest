@@ -2,5 +2,5 @@
 
 public interface IDiscount
 {
-    void Discount();
+    void DiscountMessage();
 }
