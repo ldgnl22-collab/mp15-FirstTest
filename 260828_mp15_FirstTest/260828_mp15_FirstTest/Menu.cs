@@ -1,5 +1,7 @@
 ﻿
 
+using System;
+
 public abstract class Menu
 {
     private string name;
@@ -8,5 +10,15 @@ public abstract class Menu
     public string Name { get; protected set; }
     public int Price { get; protected set; }
 
-    public abstract void Sell();
+    public void Sell(int money)
+    {
+        if (money < price)
+        {
+            Console.WriteLine("잔액 부족");
+        }
+        else
+        {
+            Console.WriteLine("결제 완료");
+        }
+    }
 }
