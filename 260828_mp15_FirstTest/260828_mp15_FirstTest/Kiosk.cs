@@ -7,7 +7,7 @@ public class Kiosk<T> where T : Menu
     private List<T> list = new List<T>();
     private int count = 0;
 
-    public void AddMenu(T menu)
+    public void AddMenuList(T menu)
     {
         list.Add(menu);
         menu.LotNumber = count;
