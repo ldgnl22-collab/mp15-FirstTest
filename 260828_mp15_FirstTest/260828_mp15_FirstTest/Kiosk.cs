@@ -5,12 +5,13 @@ public class Kiosk<T> where T : Menu
 {
     // 리스트에 메뉴 추가
     private List<T> list = new List<T>();
-    private int lotCount = 0;
+    private int count = 0;
 
-    public void AddMenu(Menu menu)
+    public void AddMenu(T menu)
     {
-        menu.LotNumber = lotCount;
-        Console.WriteLine($"{menu.Name}");
-        lotCount++;
+        list.Add(menu);
+        menu.LotNumber = count;
+        Console.WriteLine($"{menu.LotNumber}{menu.Name}");
+        count++;
     }
 }
