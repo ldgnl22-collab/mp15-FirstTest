@@ -5,7 +5,7 @@ public class Kiosk : Menu
 {
     // 리스트에 메뉴 추가
     private List<Menu> kioskList = new List<Menu>();
-    private int count = 1;
+    private int count = 0;
     
     public List<Menu> GetMenuList { get { return kioskList; } }
     public Kiosk()

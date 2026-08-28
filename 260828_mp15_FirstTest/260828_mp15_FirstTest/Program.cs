@@ -9,6 +9,7 @@ class Program
     {
         int selectCategory = 0;
         int selectMenu = 0;
+        int menuCount = 0;
 
         bool openMart = true;
         
@@ -41,7 +42,8 @@ class Program
             {
                 case 1:
                     cart.PrintShoppingList();
-                    cart.GetMenuList(kiosk.GetMenuList[selectMenu-1]);
+                    menuCount = ConsoleInput.ReadIntAtLeast("수량 : ", 0);
+                    
                     break;
                 case 2:
                     break;

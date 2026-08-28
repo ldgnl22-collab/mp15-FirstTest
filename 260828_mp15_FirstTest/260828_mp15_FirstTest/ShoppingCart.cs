@@ -12,11 +12,11 @@ public class ShoppingCart : Menu
         if (shoppingList.Contains(menu))
         {
             menu.Count++;
-            Console.WriteLine($"{menu.Name} 수량 : {menu.Count}");
+            Console.WriteLine($"{menu.Name} 수량 : {menu.Count+1}");
         }
         else
         {
-            Console.WriteLine($"{menu.Name} 수량 : {menu.Count}");
+            Console.WriteLine($"{menu.Name} 수량 : {menu.Count+1}");
         }
         shoppingList.Add(menu);
     }

@@ -6,7 +6,7 @@ public abstract class Menu
 {
     private int lotNumber;
     private string name;
-    private int count = 1;
+    private int count;
     private int price;
     private string type;
     protected string discount = "정가";
