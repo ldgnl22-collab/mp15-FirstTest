@@ -1,6 +1,10 @@
 ﻿
 
-public class Drink
+public class Drink : Menu
 {
-    
+    public Drink(string name, int price)
+    {
+        Name = name;
+        Price = price;
+    }
 }
