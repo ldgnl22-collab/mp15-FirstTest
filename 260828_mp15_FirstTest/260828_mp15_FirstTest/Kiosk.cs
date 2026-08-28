@@ -22,4 +22,9 @@ public class Kiosk<T> where T : Menu
         }
         count++;
     }
+
+    protected Menu GetMenu(int index)
+    {
+        return kioskList[index];
+    }
 }
