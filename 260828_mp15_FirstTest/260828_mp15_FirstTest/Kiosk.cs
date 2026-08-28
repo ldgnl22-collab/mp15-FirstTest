@@ -1,17 +1,26 @@
 ﻿using System;
 using System.Collections.Generic;
 
-public class Kiosk<T> where T : Menu
+public class Kiosk : Menu
 {
     // 리스트에 메뉴 추가
-    private List<T> kioskList = new List<T>();
+    private List<Menu> kioskList = new List<Menu>();
     private int count = 1;
+    
+    public List<Menu> GetMenuList { get { return kioskList; } }
+    public Kiosk()
+    {}
+    public int Count { get { return kioskList.Count; } }
 
-    public void AddMenuList(T menu)
+    public void AddMenuList(Menu menu)
     {
         kioskList.Add(menu);
-        menu.LotNumber = count;
-        Console.Write($"{menu.LotNumber}. {menu.Name} ({menu.Type})  가격: {menu.Price}");
+        Console.Write($"{kioskList.Count}. {menu.Name} ({menu.Type})  가격: {menu.Price}");
+        PrintDiscount(menu);
+    }
+
+    private void PrintDiscount(Menu menu)
+    {
         if (menu is IDiscount)
         {
             Console.WriteLine($"  [{(menu as IDiscount).DiscountMessage()}]");
@@ -20,7 +29,6 @@ public class Kiosk<T> where T : Menu
         {
             Console.WriteLine($"  [{menu.Discount}]");
         }
-        count++;
     }
 
     protected Menu GetMenu(int index)
