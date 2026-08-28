@@ -1,5 +1,12 @@
 ﻿
 
+public enum MenuType
+{
+    Drink,
+    Dessert,
+    Bread
+}
+
 public enum DrinkList
 {
     Americano,
